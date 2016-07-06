@@ -63,6 +63,14 @@ describe(Task) do
       expect(Task.all()).to eq([task])
     end
 
+    it('appends the last saved task to the task list on save') do
+      Task.clear()
+      task1 = Task.new("one")
+      task2 = Task.new("two")
+      task1.save()
+      task2.save()
+      expect(Task.all().last()).to eq(task2)
+    end
 
   end
 
