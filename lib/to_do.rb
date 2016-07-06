@@ -20,5 +20,4 @@ class Task
   define_singleton_method(:clear) do
     @@all_tasks.clear
   end
-
 end

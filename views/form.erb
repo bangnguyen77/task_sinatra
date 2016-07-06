@@ -1,0 +1,51 @@
+
+<h1>Task List</h1>
+
+<form class="" action="/" method="post">
+  <div class="form-group">
+    <label for="description">Enter task description and save to add a task to the task list:</label>
+    <input type="text" name="description" class="form-control" value="">
+  </div>
+
+<button type="submit" class="btn-success">Add</button>
+
+</form>
+
+<hr>
+
+<section>
+
+  <% if Task.all().size() > 0 %>
+    <h2>Task List</h2>
+    <ul>
+      <% Task.all().each do |task| %>
+      <li class="font_24px"><%= task.description() %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+</section>
+
+<!-- <form action="/parcels">
+  <div class="form-group">
+    <label for="height">Height:</label>
+    <input id="height" name="height" class="form-control" type="number">
+  </div>
+  <div class="form-group">
+    <label for="width">Wdith:</label>
+    <input id="width" name="width" class="form-control" type="number">
+  </div>
+  <div class="form-group">
+    <label for="depth">Depth:</label>
+    <input id="depth" name="depth" class="form-control" type="number">
+  </div>
+  <div class="form-group">
+    <label for="weight">Weigth:</label>
+    <input id="weight" name="weight" class="form-control" type="number">
+  </div>
+  <div class="form-group">
+    <label for="distance">Weigth:</label>
+    <input id="distance" name="distance" class="form-control" type="number">
+  </div>
+  <button type="submit" class="btn">Submit</button>
+</form> -->
